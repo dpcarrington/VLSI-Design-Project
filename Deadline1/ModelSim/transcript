@@ -1,0 +1,79 @@
+# Reading C:/modeltech_6.6/tcl/vsim/pref.tcl 
+# Updating type .v file registration. 
+# Updating type .vhd file registration. 
+# Updating type .wlf file registration. 
+# //  ModelSim SE 6.6 Jan  5 2010 
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# OpenFile H:/VLSI/git/VLSI-Design-Project/Deadline1/ModelSim/vsim.wlf 
+vsim work.tap_tb
+# vsim work.tap_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tap_tb(fast)
+vsim -novopt work.tap_tb
+# vsim -novopt work.tap_tb 
+# Loading work.tap_tb
+# Loading work.tap
+add wave \
+{sim:/tap_tb/tms } \
+{sim:/tap_tb/tck } \
+{sim:/tap_tb/reset } \
+{sim:/tap_tb/select } \
+{sim:/tap_tb/enable } \
+{sim:/tap_tb/clock_ir } \
+{sim:/tap_tb/capture_ir } \
+{sim:/tap_tb/shift_ir } \
+{sim:/tap_tb/update_ir } \
+{sim:/tap_tb/clock_dr } \
+{sim:/tap_tb/capture_dr } \
+{sim:/tap_tb/shift_dr } \
+{sim:/tap_tb/update_dr } 
+add wave \
+{sim:/tap_tb/uut/y } 
+run -continue
+run
+run
+run
+run
+run
+run
+quit -sim
+vsim -novopt work.tap_tb
+# vsim -novopt work.tap_tb 
+# Loading work.tap_tb
+# Loading work.tap
+add wave \
+{sim:/tap_tb/tms } \
+{sim:/tap_tb/tck } \
+{sim:/tap_tb/reset } \
+{sim:/tap_tb/select } \
+{sim:/tap_tb/enable } \
+{sim:/tap_tb/clock_ir } \
+{sim:/tap_tb/capture_ir } \
+{sim:/tap_tb/shift_ir } \
+{sim:/tap_tb/update_ir } \
+{sim:/tap_tb/clock_dr } \
+{sim:/tap_tb/capture_dr } \
+{sim:/tap_tb/shift_dr } \
+{sim:/tap_tb/update_dr } 
+add wave \
+{sim:/tap_tb/uut/y } 
+run
+run
+run
+run
+run -continue
+run
+restart
+run
+run
+run
+run
+run

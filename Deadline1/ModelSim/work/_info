@@ -1,0 +1,35 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\VLSI\git\VLSI-Design-Project\Deadline1\Deadline1\ModelSim
+vtap
+VzY3YhIoe]0SNIE7dlkKaJ1
+r1
+31
+IY8ZC[eVec3@B7_aN@UPO41
+Z1 dH:\VLSI\git\VLSI-Design-Project\Deadline1\ModelSim
+w1295750611
+8H:/VLSI/git/VLSI-Design-Project/Deadline1/tap.v
+FH:/VLSI/git/VLSI-Design-Project/Deadline1/tap.v
+L0 1
+Z2 OE;L;6.6;45
+Z3 !s102 -nocovercells
+Z4 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+!s100 `lMBfR:niR@oX24zij^933
+!s85 0
+vtap_tb
+VK]Ff^a`k8HP:zCHjX[OAM1
+r1
+31
+IkPMY]EmLbG`d5JM^l99:z1
+R1
+w1295748871
+8H:/VLSI/git/VLSI-Design-Project/Deadline1/TAP_tb.v
+FH:/VLSI/git/VLSI-Design-Project/Deadline1/TAP_tb.v
+L0 1
+R2
+R3
+R4
+!s100 DD[^a3Y72T>MkD0@R1QB@1
+!s85 0
