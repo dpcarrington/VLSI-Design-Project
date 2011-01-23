@@ -56,6 +56,36 @@ module shadow_register(
 	endgenerate
 endmodule
 
+module instruction_register_scan_path(
+	input clk,
+	input reset,
+	input shift,
+	input capture,
+	input update,
+	input tdi,
+	output tdo,
+	output [REG_WIDTH-1:0]instruction);
+	parameter REG_WIDTH = 2;
+
+	wire [REG_WIDTH-1:0]status;
+	wire [REG_WIDTH-1:0]data;
+
+	assign status = 2'b01;
+
+	register #(.WIDTH(REG_WIDTH))
+		ir_scan_latches(clk,
+			reset,
+			shift,
+			capture,
+			status,
+			tdi,
+			data,
+			tdo);
+	
+	shadow_register #(.WIDTH(REG_WIDTH))
+		ir_shadow_latches(clk, reset, update, data, instruction);
+endmodule
+
 module scan_block(
 	input clk,
 	input reset,
@@ -87,11 +117,4 @@ module scan_block(
 			cap_lines);
 	
 endmodule
-	
-	
-	
-	
-	
-	
-	
 	
