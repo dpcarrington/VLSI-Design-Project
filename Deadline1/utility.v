@@ -29,4 +29,15 @@ module basicmux(
 	assign q = select ? d1 : d0;
 endmodule
 
+module encoder2to4(
+	input [1:0]address,
+	output zero,
+	output one,
+	output two,
+	output three);
 
+	assign zero = address == 2'b00;
+	assign one = address == 2'b01;
+	assign two = address == 2'b10;
+	assign three = address == 2'b11;
+endmodule

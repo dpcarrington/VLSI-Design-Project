@@ -20,8 +20,7 @@ module project (
 		tap_clock_ir, tap_capture_ir, tap_shift_ir, tap_update_ir,
 		tap_clock_dr, tap_capture_ir, tap_shift_dr, tap_update_dr);
 		
-	scan_block #( REG_WIDTH(REGISTER_WIDTH) )
-		IR_scan_path(tap_clock_ir, 
+	ir_scan_path IR_Scan_Path(tap_clock_ir, 
 			tap_reset,
 			tap_shift_ir, 
 			tap_capture_ir, 
@@ -29,12 +28,43 @@ module project (
 			tdi, 
 			ir_tdo);
 		
-	scan_block #( REG_WIDTH(REGISTER_WIDTH) )
-		DR_scan_path(tap_clock_dr,
+	dr_scan_path DR_Scan_Path(tap_clock_dr,
 			tap_reset,
 			tap_shift_dr,
 			tap_capture_dr,
 			tap_update_dr,
 			tdi,
 			dr_tdo);
+endmodule
+
+module dr_scan_path(
+	input clk,
+	input reset,
+	input shift,
+	input capture,
+	input update,
+	input tdi,
+	input [INST_WIDTH-1:0]instruction,
+	output tdo);
+	parameter INST_WIDTH = 2;
+
+	wire bypass_enable, sample_enable, extest_enable;
+	wire boundary_enable;
+	wire bypass_tdo;
+	wire boundary_tdo;
+
+	bypass_register Bypass(clk, reset && bypass_enable, 
+			shift && bypass_enable, 
+			capture && bypass_enable, 
+			update && bypass_enable, 
+			tdi, bypass_tdo);
+	scan_block Boundary_Scan(clk, reset && boundary_enable,
+			shift && boundary_enable,
+			capture && boundary_enable,
+			update && boundary_enable,
+			tdi, boundary_tdo);
+	
+	encoder2to4 Address_Encoder(.address(instruction), .zero(extest_enable),
+			.one(sample_enable), .three(bypass_enable));
+	assign tdo = boundary_enable ? boundary_tdo : bypass_tdo;
 endmodule

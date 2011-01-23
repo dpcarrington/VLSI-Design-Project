@@ -56,7 +56,7 @@ module shadow_register(
 	endgenerate
 endmodule
 
-module instruction_register_scan_path(
+module ir_scan_path(
 	input clk,
 	input reset,
 	input shift,
@@ -118,3 +118,14 @@ module scan_block(
 	
 endmodule
 	
+module bypass_register(
+	input clk,
+	input reset,
+	input shift,
+	input capture,
+	input update,
+	input tdi,
+	output tdo);
+
+	scan_block #(1)(clk, reset, shift, capture, update, tdi, tdo);
+endmodule
