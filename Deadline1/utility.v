@@ -29,7 +29,7 @@ module basicmux(
 	assign q = select ? d1 : d0;
 endmodule
 
-module encoder2to4(
+module decoder2to4(
 	input [1:0]address,
 	output zero,
 	output one,
