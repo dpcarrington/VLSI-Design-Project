@@ -1,12 +1,12 @@
 
-module d_ff(clk, reset, enable, d, q);
-	input clk, d, reset, enable;
+module d_ff(clk, reset, enable, d, q, rstvalue);
+	input clk, d, reset, enable, rstvalue;
 	output q;
 	reg q;
 
 	always @(posedge clk)
 		if (enable)
-			q <= reset & d;
+			q <= reset ? rstvalue : d;
 endmodule
 
 module register(
@@ -20,6 +20,7 @@ module register(
 	output tdo);
 	
 	parameter WIDTH = 8;
+	parameter RESET_TO = 1'b1;
 	wire [WIDTH:0]shift_line;
 	wire [WIDTH-1:0]data;
 	wire enable;
@@ -33,7 +34,7 @@ module register(
 	generate
 		for (i = 0 ; i < WIDTH ; i = i + 1) begin:REG_BITS
 			basicmux dataselect(shift, parallel_data[i], shift_line[i], data[i])
-			d_ff bit(clk, reset, enable, data[i], shift_line[i+1]);
+			d_ff bit(clk, reset, enable, data[i], shift_line[i+1], RESET_TO);
 		end
 	endgenerate
 endmodule
@@ -46,12 +47,13 @@ module shadow_register(
 	output [WIDTH-1:0]q);
 	
 	parameter WIDTH = 8;
+	parameter RESET_TO = 1'b1;
 	
 	genvar i;
 	
 	generate
 		for (i = 0 ; i < WIDTH ; i = i + 1) begin:REG_BITS
-			d_ff bit(clk, reset, enable, data[i], q[i]);
+			d_ff bit(clk, reset, enable, data[i], q[i], RESET_TO);
 		end
 	endgenerate
 endmodule
@@ -63,16 +65,14 @@ module ir_scan_path(
 	input capture,
 	input update,
 	input tdi,
+	input [REG_WIDTH-1:0]status,
 	output tdo,
 	output [REG_WIDTH-1:0]instruction);
 	parameter REG_WIDTH = 2;
 
-	wire [REG_WIDTH-1:0]status;
 	wire [REG_WIDTH-1:0]data;
 
-	assign status = 2'b01;
-
-	register #(.WIDTH(REG_WIDTH))
+	register #(.WIDTH(REG_WIDTH), .RESET_TO((1<<REG_WIDTH) - 1))
 		ir_scan_latches(clk,
 			reset,
 			shift,
@@ -82,7 +82,7 @@ module ir_scan_path(
 			data,
 			tdo);
 	
-	shadow_register #(.WIDTH(REG_WIDTH))
+	shadow_register #(.WIDTH(REG_WIDTH), .RESET_TO(1))
 		ir_shadow_latches(clk, reset, update, data, instruction);
 endmodule
 
