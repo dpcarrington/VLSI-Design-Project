@@ -11,6 +11,7 @@ module project (
 	wire tap_clock_dr, tap_update_dr, tap_shift_dr;
 	
 	wire ir_tdo, dr_tdo, tdo_gated;
+	wire [1:0]instruction;
 	
 	basic_mux tdo_mux(tap_select, dr_tdo, ir_tdo, tdo_gated);
 	
@@ -26,7 +27,9 @@ module project (
 			tap_capture_ir, 
 			tap_update_ir, 
 			tdi, 
-			ir_tdo);
+			2'b01,
+			ir_tdo,
+			instruction);
 		
 	dr_scan_path DR_Scan_Path(tap_clock_dr,
 			tap_reset,
@@ -34,6 +37,7 @@ module project (
 			tap_capture_dr,
 			tap_update_dr,
 			tdi,
+			instruction,
 			dr_tdo);
 endmodule
 
@@ -64,7 +68,7 @@ module dr_scan_path(
 			update && boundary_enable,
 			tdi, boundary_tdo);
 	
-	encoder2to4 Address_Encoder(.address(instruction), .zero(extest_enable),
+	decoder2to4 Address_Encoder(.address(instruction), .zero(extest_enable),
 			.one(sample_enable), .three(bypass_enable));
 	assign tdo = boundary_enable ? boundary_tdo : bypass_tdo;
 endmodule
