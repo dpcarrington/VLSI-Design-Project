@@ -1,0 +1,80 @@
+m255
+K3
+13
+cModel Technology
+dC:\modeltech_6.6\examples
+vbasicmux
+!s100 eGizW=cNFSbYzVDY`Sgf<1
+ISR1U?z2U34VYco9E;VEO<2
+V7_=CC_hV<z]L5;aSmbcU<2
+Z0 dH:\VLSI Project\VLSI-Design-Project\Deadline1
+Z1 w1295998463
+Z2 8H:/VLSI Project/VLSI-Design-Project/Deadline1/utility.v
+Z3 FH:/VLSI Project/VLSI-Design-Project/Deadline1/utility.v
+L0 23
+Z4 OE;L;6.6;45
+r1
+!s85 0
+31
+Z5 !s102 -nocovercells
+Z6 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+vbypass_register
+Ii4SWDV?b?E]N1eDmXgiV]3
+VDQY=HWm4_VNDoOK8zFlag2
+Z7 dH:\VLSI Project\VLSI-Design-Project\Deadline1
+w0
+Z8 8H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v
+Z9 FH:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v
+L0 121
+R4
+r1
+31
+R5
+R6
+!s100 Z991Z21DQ;bGk?6<gj0<81
+!s85 0
+vd_ff
+I;i1cA7D1m;IRi`N:;oYTz3
+ViRIWJY>;4?SzF:HH7NN3>2
+R7
+w1295998129
+R8
+R9
+L0 2
+R4
+r1
+31
+R5
+R6
+!s100 Q5a3JBbm0mLgB6Wn8zE183
+!s85 0
+vdecoder2to4
+!s100 [C]2<DGH9=jaT8ZD1Z9Cj1
+IU9WFJF5EE9eWW<]fY^zCP3
+V8n91Ln7Zjb;mkahGzC]RU0
+R7
+R1
+R2
+R3
+L0 32
+R4
+r1
+!s85 0
+31
+R5
+R6
+vscan_block
+ILbDOLzTm_Z[:USS?VdPh83
+V7_ZHAmHNH56;nmY:1W1[L3
+R7
+w0
+R8
+R9
+L0 89
+R4
+r1
+31
+R5
+R6
+!s100 YI=o4;c_GiJS;XNbdnah02
+!s85 0
