@@ -14,16 +14,18 @@ module register(
 	input reset,
 	input shift, //Enables shifting TDI
 	input update, //Enables parallel-updating from parallel data in
-	input [WIDTH-1:0]parallel_data,
+  parallel_data,
 	input tdi,
-	output [WIDTH-1:0]q,
+	output q,
 	output tdo);
-	
 	parameter WIDTH = 8;
 	parameter RESET_TO = 1'b1;
 	wire [WIDTH:0]shift_line;
 	wire [WIDTH-1:0]data;
 	wire enable;
+	
+	input [WIDTH-1:0]parallel_data;
+	output [WIDTH-1:0]q;
 	
 	assign shift_line[0] = tdi;
 	assign q = shift_line[WIDTH:1];
@@ -33,7 +35,7 @@ module register(
 	genvar i;
 	generate
 		for (i = 0 ; i < WIDTH ; i = i + 1) begin:REG_BITS
-			basicmux dataselect(shift, parallel_data[i], shift_line[i], data[i])
+			basicmux dataselect(shift, parallel_data[i], shift_line[i], data[i]);
 			d_ff bit(clk, reset, enable, data[i], shift_line[i+1], RESET_TO);
 		end
 	endgenerate
@@ -43,11 +45,13 @@ module shadow_register(
 	input clk,
 	input reset,
 	input enable,
-	input [WIDTH-1:0]data,
-	output [WIDTH-1:0]q);
-	
+	input data,
+	output q);
 	parameter WIDTH = 8;
 	parameter RESET_TO = 1'b1;
+	
+	input [WIDTH-1:0]data;
+	output [WIDTH-1:0]q;
 	
 	genvar i;
 	
@@ -65,10 +69,13 @@ module ir_scan_path(
 	input capture,
 	input update,
 	input tdi,
-	input [REG_WIDTH-1:0]status,
+	input status,
 	output tdo,
-	output [REG_WIDTH-1:0]instruction);
+	output instruction);
 	parameter REG_WIDTH = 2;
+	
+	input [REG_WIDTH-1:0]status;
+	output [REG_WIDTH-1:0]instruction;
 
 	wire [REG_WIDTH-1:0]data;
 

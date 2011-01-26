@@ -3,7 +3,7 @@ module project (
 	input tdi,
 	input tms,
 	input tck,
-	output tdo)
+	output tdo);
 	parameter REGISTER_WIDTH = 8;
 	
 	wire tap_reset, tap_select, tap_enable;
@@ -48,9 +48,11 @@ module dr_scan_path(
 	input capture,
 	input update,
 	input tdi,
-	input [INST_WIDTH-1:0]instruction,
+	input instruction,
 	output tdo);
 	parameter INST_WIDTH = 2;
+	
+	input [INST_WIDTH-1:0]instruction;
 
 	wire bypass_enable, sample_enable, extest_enable;
 	wire boundary_enable;

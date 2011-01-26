@@ -1,48 +1,45 @@
-{H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v} {0 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v}
+{H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v}
 Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
 -- Compiling module tap
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(60): near "else": syntax error, unexpected "else", expecting ';'
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(69): near "Pause_Dr": syntax error, unexpected "IDENTIFIER", expecting ';'
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(71): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(73): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(75): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(77): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(79): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(81): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(85): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(87): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v(89): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
 
-} {4.0 15.0} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/project.v} {0 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/project.v}
+Top level modules:
+	tap
+
+} {} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/project.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/project.v}
 Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
 -- Compiling module project
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/project.v(7): near "parameter": syntax error, unexpected "parameter", expecting ';'
+-- Compiling module dr_scan_path
 
-} {4.0 5.0} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v} {0 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v}
+Top level modules:
+	project
+
+} {} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/utility.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/utility.v}
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module basicmux
+-- Compiling module decoder2to4
+
+Top level modules:
+	basicmux
+	decoder2to4
+
+} {} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v}
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module project_tb
+
+Top level modules:
+	project_tb
+
+} {} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v}
 Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
 -- Compiling module d_ff
 -- Compiling module register
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(17): Undefined variable: WIDTH.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(17): 'parallel_data' already declared in this scope (register).
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(22): 'WIDTH' already declared in this scope.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(37): near "d_ff": syntax error, unexpected "IDENTIFIER", expecting ';' or ','
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(17): Identifier must be declared with a port mode: parallel_data.
 -- Compiling module shadow_register
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(46): 'data' already declared in this scope (shadow_register).
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(49): 'WIDTH' already declared in this scope.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(46): Identifier must be declared with a port mode: data.
 -- Compiling module ir_scan_path
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(68): Undefined variable: REG_WIDTH.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(68): 'status' already declared in this scope (ir_scan_path).
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(71): 'REG_WIDTH' already declared in this scope.
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v(68): Identifier must be declared with a port mode: status.
 -- Compiling module scan_block
 -- Compiling module bypass_register
 
-} {5.0 10.0 11.0 14.0 15.0 19.0} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v} {0 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v}
-Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
--- Compiling module project_tb
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v(16): near ")": syntax error, unexpected ')', expecting ".*" or '.'
-** Error: H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v(84): near "end": syntax error, unexpected "end"
+Top level modules:
+	ir_scan_path
+	bypass_register
 
-} {4.0 6.0} {}}
+} {} {}}
