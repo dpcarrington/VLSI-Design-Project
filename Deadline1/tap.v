@@ -93,7 +93,7 @@ module tap (
 	end
 	
 	// Output Assignments
-	assign reset = (y == 4'b1000);
+	assign reset = ~(y == 4'b1000);
 	assign select = y[3]; // 1 for IR, 0 otherwise
 	// assign select = (Y[3] == 1'b1); // 1 for IR, 0 otherwise
 	
