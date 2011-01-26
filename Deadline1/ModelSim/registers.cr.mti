@@ -1,0 +1,45 @@
+{H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/tap.v}
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module tap
+
+Top level modules:
+	tap
+
+} {} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/project.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/project.v}
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module project
+-- Compiling module dr_scan_path
+
+Top level modules:
+	project
+
+} {} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/registers.v}
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module d_ff
+-- Compiling module register
+-- Compiling module shadow_register
+-- Compiling module ir_scan_path
+-- Compiling module scan_block
+-- Compiling module bypass_register
+
+Top level modules:
+	ir_scan_path
+	bypass_register
+
+} {} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v}
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module project_tb
+
+Top level modules:
+	project_tb
+
+} {} {}} {H:/VLSI Project/VLSI-Design-Project/Deadline1/utility.v} {1 {vlog -work work -vopt -nocovercells {H:/VLSI Project/VLSI-Design-Project/Deadline1/utility.v}
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module basicmux
+-- Compiling module decoder2to4
+
+Top level modules:
+	basicmux
+	decoder2to4
+
+} {} {}}
