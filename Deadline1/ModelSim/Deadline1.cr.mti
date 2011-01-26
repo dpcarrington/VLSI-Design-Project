@@ -1,0 +1,15 @@
+H:/VLSI/git/VLSI-Design-Project/Deadline1/tap.v {1 {vlog -work work -vopt -nocovercells H:/VLSI/git/VLSI-Design-Project/Deadline1/tap.v
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module tap
+
+Top level modules:
+	tap
+
+} {} {}} H:/VLSI/git/VLSI-Design-Project/Deadline1/TAP_tb.v {1 {vlog -work work -vopt -nocovercells H:/VLSI/git/VLSI-Design-Project/Deadline1/TAP_tb.v
+Model Technology ModelSim SE vlog 6.6 Compiler 2010.01 Jan  5 2010
+-- Compiling module tap_tb
+
+Top level modules:
+	tap_tb
+
+} {} {}}
