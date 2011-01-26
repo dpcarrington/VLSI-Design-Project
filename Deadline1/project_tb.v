@@ -12,7 +12,7 @@ project uut(
 	.TMS (TMS),
 	.TDI (TDI),
 	.TCK (TCK),
-	.TDO (TDO),
+	.TDO (TDO)
 	);
 // Insert Global Resets??
 initial begin
@@ -21,65 +21,65 @@ initial begin
 end
 
 always
-	#10 TCK = ~TCK;
+	#5 TCK = ~TCK;
 	
 
 initial begin
-	TMS = 1;
-	TMS = 0;
-	TMS = 0;
-	TMS = 1;
-	TMS = 1;
-	TMS = 1;
-	TMS = 0;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 1; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
 
 
-	TMS = 1;
-	TMS = 0;
-	TMS = 1;
-	TMS = 1;
-	TMS = 1;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 1; #10;
+	TMS = 1; #10;
 
 
-	TMS = 0;
-	TMS = 0;
-	TMS = 0;
-	TMS = 1;
-	TMS = 0;
-	TMS = 0;
-	TMS = 1;
-	TMS = 0;
-	TMS = 1;
-	TMS = 0;
-	TMS = 1;
-	TMS = 1;
-	TMS = 0;
+	TMS = 0; #10;
+	TMS = 0; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
 
 
-	TMS = 1;
-	TMS = 1;
-	TMS = 0;
-	TMS = 1;
-	TMS = 1;
-	TMS = 1;
+	TMS = 1; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 1; #10;
+	TMS = 1; #10;
 
 
-	TMS = 1;
-	TMS = 0;
-	TMS = 0;
-	TMS = 0;
-	TMS = 1;
-	TMS = 0;
-	TMS = 0;
-	TMS = 1;
-	TMS = 0;
-	TMS = 1;
-	TMS = 0;
-	TMS = 1;
-	TMS = 1;
-	TMS = 0;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 0; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
+	TMS = 1; #10;
+	TMS = 1; #10;
+	TMS = 0; #10;
 
-#10
+#10;
 
 end
 

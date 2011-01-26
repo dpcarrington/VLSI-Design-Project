@@ -8,7 +8,7 @@ vbasicmux
 ISR1U?z2U34VYco9E;VEO<2
 V7_=CC_hV<z]L5;aSmbcU<2
 Z0 dH:\VLSI Project\VLSI-Design-Project\Deadline1
-Z1 w1295998463
+Z1 w1296000287
 Z2 8H:/VLSI Project/VLSI-Design-Project/Deadline1/utility.v
 Z3 FH:/VLSI Project/VLSI-Design-Project/Deadline1/utility.v
 L0 23
@@ -37,7 +37,7 @@ vd_ff
 I;i1cA7D1m;IRi`N:;oYTz3
 ViRIWJY>;4?SzF:HH7NN3>2
 R7
-w1295998129
+R1
 R8
 R9
 L0 2
@@ -63,6 +63,21 @@ r1
 31
 R5
 R6
+vproject_tb
+IUa:LB3o;U]4l]F9dZPzhI1
+VQA8<^]WmNOHWVi@Zg^?142
+R7
+w1296000757
+8H:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v
+FH:/VLSI Project/VLSI-Design-Project/Deadline1/project_tb.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!s100 8G_E8KL7BSW2dMg[Y]<?h3
+!s85 0
 vscan_block
 ILbDOLzTm_Z[:USS?VdPh83
 V7_ZHAmHNH56;nmY:1W1[L3
